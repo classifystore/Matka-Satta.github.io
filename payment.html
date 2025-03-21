@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Payment</title>
+    <style>
+        /* Style for page */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Style for the QR code container */
+        .qr-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        /* Style for the QR code image */
+        .qr-container img {
+            width: 200px; /* Adjust the size of the QR code */
+            height: 200px;
+            margin: 20px;
+        }
+
+        /* Style for the payment instruction */
+        .payment-instructions {
+            font-size: 20px;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        /* Style for the back button */
+        .back-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            margin-top: 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Style for the WhatsApp icon at the bottom-right corner */
+        .whatsapp-icon {
+            position: fixed; /* Fix the icon to the bottom-right corner */
+            bottom: 20px; /* Adjust the position from the bottom of the page */
+            right: 20px; /* Adjust the position from the right of the page */
+            z-index: 1; /* Ensure the icon stays above other content */
+        }
+
+        .whatsapp-icon img {
+            width: 50px; /* Adjust size of WhatsApp icon */
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Make Your Payment</h2>
+
+    <!-- Display the Amount to be Paid -->
+    <p class="payment-instructions">
+        Amount to be paid: ₹<span id="payment-amount"></span>
+    </p>
+    
+    <!-- QR Code Container -->
+    <div class="qr-container">
+        <!-- Replace this with your actual QR code image -->
+        <img id="qr-code" src="NakuQR.jpeg" alt="QR Code for Payment">
+    </div>
+
+    <!-- Payment Instructions -->
+    <p class="payment-instructions">
+        Please scan the QR code to complete your payment.
+        <br> 
+        After the payment is done, you will be Share Screenshot with us.
+    </p>
+
+    <!-- Back Button -->
+    <a href="index.html" class="back-button">Back to Game</a>
+
+    <!-- WhatsApp Icon and Link -->
+    <div class="whatsapp-icon">
+        <a href="https://wa.me/7413969451" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+        </a>
+    </div>
+
+    <script>
+        // Function to get query parameters from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const amount = urlParams.get('amount');  // Get the amount from URL
+        
+        // Display the amount on the page
+        document.getElementById('payment-amount').textContent = amount;
+
+        // Optional: If you want to dynamically generate the QR code URL, you can use this block.
+        // You can replace this with actual QR code generation logic or a specific URL
+        // For now, it's using the statically set image "NakuQR.jpeg"
+        const qrCodeUrl = `https://example.com/payment?amount=${amount}`;  // Replace with actual QR code payment URL
+    </script>
+</body>
+</html>

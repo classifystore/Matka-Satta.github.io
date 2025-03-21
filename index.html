@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <style>
+        /* Style for h2 (Main Heading) */
+        h2 {
+            font-size: 36px; /* Adjust the size of the heading */
+            font-weight: bold; /* Make the heading bold */
+            color: #333; /* Set the color */
+            margin-bottom: 20px; /* Adds space below the h2 heading */
+        }
+
+        /* Style for h3 (Subheading) */
+        h3 {
+            font-size: 28px; /* Adjust the size of the subheading */
+            font-weight: normal; /* Make the subheading normal weight */
+            color: #555; /* Set the color */
+            margin-left: 30px; /* Add space from the left side */
+            margin-top: 10px; /* Add space above the h3 heading */
+        }
+
+        /* Style for the text with the clock emoji */
+        .super-fast-payment {
+            font-size: 24px; /* Adjust the font size */
+            color: #0066cc; /* Set a blue color */
+            margin-top: 20px; /* Add space above the text */
+        }
+
+        /* Style for the payment section */
+        .payment-section {
+            font-size: 20px;
+            margin-top: 30px;
+        }
+
+        /* Style for the dropdown and button */
+        .dropdown, .game-button, .payment-button {
+            font-size: 18px;
+            padding: 10px;
+            margin: 10px 0;
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            cursor: pointer; /* Make the button appear clickable */
+            border-radius: 5px; /* Rounded corners for the button */
+        }
+
+        /* Hidden content style */
+        .game-content, .payment-content {
+            display: none;
+            margin-top: 20px;
+        }
+
+        /* Styling for the "भुगतान करें" button */
+        .payment-button {
+            background-color: #28a745; /* Green color */
+            color: white; /* White text */
+            border: none;
+            font-weight: bold;
+            text-align: center;
+            width: auto;
+            padding: 12px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .payment-button:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        /* Center the button on the page */
+        .center-button {
+            text-align: center; /* Ensure it is centered */
+        }
+
+        /* Style for the input and copy button */
+        .input-container {
+            margin-top: 20px;
+        }
+
+        .input-container input {
+            font-size: 18px;
+            padding: 10px;
+            width: 100px;
+            margin-right: 10px;
+        }
+
+        .copy-button {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .copy-button:hover {
+            background-color: #218838;
+        }
+
+        /* Styling for the payment icons */
+        .payment-icons img {
+            width: 50px; /* Set size for the payment icons */
+            margin: 10px; /* Add space between the icons */
+        }
+    </style>
+</head>
+<body>
+    <h2>ॐ ऑनलाइन खाईवाल  ॐ</h2>
+    <h3>🤴आयु भाई🤴</h3>
+    <p class="super-fast-payment">💨 सुपर फास्ट पेमेंट का वादा 10 से 15 मिनट के अंदर</p>
+
+    <!-- Static List of Options -->
+    <ul>
+        <li>1. दिल्ली बाजार ........ 3:00 (Delhi Bazar ........ 3:00)</li>
+        <li>2. श्री गणेश ........ 4:35 (Shree Ganesh ........ 4:35)</li>
+        <li>3. फरीदाबाद ........ 5:50 (Faridabad ........ 5:50)</li>
+        <li>4. गाज़ियाबाद ........ 8:45 (Ghaziabad ........ 8:45)</li>
+        <li>5. गली ........ 11:15 (Gali ........ 11:15)</li>
+        <li>6. दिसावर ........ 2:00 (Disawar ........ 2:00)</li>
+    </ul>
+
+    <!-- All Payment Accepted Section -->
+    <div class="payment-section">
+        <p>सभी प्रकार के भुगतान स्वीकार किए जाते हैं:</p>
+        <p>All Payment Accepted ✅</p>
+        <div class="payment-icons">
+            <img src="https://static.toiimg.com/thumb/msid-108442922,width-400,resizemode-4/108442922.jpg" alt="Paytm">
+            <img src="https://w7.pngwing.com/pngs/332/615/png-transparent-phonepe-india-unified-payments-interface-india-purple-violet-text-thumbnail.png" alt="PhonePe">
+            <img src="https://i.pinimg.com/564x/8d/ec/e1/8dece15cc40aaf66ed47f6591b639d06.jpg" alt="Google Pay">
+            <img src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202312/658d1f60dabdd-google-pay--paytm-and-phonepe-users-will-soon-get-to-use-tap-and-pay-281022577-16x9.jpg" alt="Other Payment">
+        </div>
+    </div>
+
+    <!-- Game Button Section -->
+    <button class="game-button" onclick="showGameContent()">Game khelne ke liye Click Kare</button>
+
+    <!-- Hidden Content for Game -->
+    <div class="game-content" id="game-content">
+        <h3>अपना ऑप्शन चुनें:</h3>
+
+        <!-- Old List Format (Static Option List) -->
+        <h4>Static Option List:</h4>
+        <ul class="time-table">
+            <li>1. दिल्ली बाजार ........ 3:00 (Delhi Bazar ........ 3:00)</li>
+            <li>2. श्री गणेश ........ 4:35 (Shree Ganesh ........ 4:35)</li>
+            <li>3. फरीदाबाद ........ 5:50 (Faridabad ........ 5:50)</li>
+            <li>4. गाज़ियाबाद ........ 8:45 (Ghaziabad ........ 8:45)</li>
+            <li>5. गली ........ 11:15 (Gali ........ 11:15)</li>
+            <li>6. दिसावर ........ 2:00 (Disawar ........ 2:00)</li>
+        </ul>
+
+        <!-- Dropdown for Time Selection -->
+        <h4>Select from Dropdown:</h4>
+        <label for="time-select">समय चुनें:</label>
+        <select class="dropdown" id="time-select">
+            <option value="delhi-bazar">1. दिल्ली बाजार ........ 3:00 (Delhi Bazar ........ 3:00)</option>
+            <option value="shree-ganesh">2. श्री गणेश ........ 4:35 (Shree Ganesh ........ 4:35)</option>
+            <option value="faridabad">3. फरीदाबाद ........ 5:50 (Faridabad ........ 5:50)</option>
+            <option value="ghaziabad">4. गाज़ियाबाद ........ 8:45 (Ghaziabad ........ 8:45)</option>
+            <option value="gali">5. गली ........ 11:15 (Gali ........ 11:15)</option>
+            <option value="disawar">6. दिसावर ........ 2:00 (Disawar ........ 2:00)</option>
+        </select>
+
+        <!-- Input for Amount -->
+        <label for="amount">राशि डालें:</label>
+        <input type="number" id="amount" name="amount" placeholder="राशि डालें" class="dropdown">
+
+        <!-- Number Selection (No. Chune) -->
+        <div class="input-container">
+            <label for="number-select">No. Chune (Choose a number from 1 to 100):</label>
+            <input type="number" id="number-select" name="number-select" min="1" max="100" placeholder="1 to 100" required>
+        </div>
+
+        <!-- Copy Button -->
+        <button class="copy-button" onclick="copyDetails()">Copy Details</button>
+
+        <!-- Make Payment Button (Initially Hidden) -->
+        <div class="center-button">
+            <button class="payment-button" id="payment-button" onclick="redirectToPaymentPage()" style="display: none;">भुगतान करें</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to show game content when the "Game khelne ke liye Click Kare" button is clicked
+        function showGameContent() {
+            var content = document.getElementById('game-content');
+            content.style.display = 'block'; // Show game content
+            document.getElementById('payment-button').style.display = 'inline-block'; // Show payment button below the amount field
+        }
+
+        // Function to redirect to the payment page with the amount in the URL query string
+        function redirectToPaymentPage() {
+            var amount = document.getElementById('amount').value; // Get the entered amount
+            if (amount && !isNaN(amount) && amount > 0) {
+                window.location.href = 'payment.html?amount=' + amount; // Redirect to payment page with the amount
+            } else {
+                alert('कृपया एक वैध राशि दर्ज करें।'); // Alert for invalid amount
+            }
+        }
+
+        // Function to copy all details (amount, selected number, and time) to clipboard
+        function copyDetails() {
+            var amount = document.getElementById('amount').value;
+            var number = document.getElementById('number-select').value;
+            var time = document.getElementById('time-select').value;
+            var textToCopy = 'Amount: ₹' + amount + '\nNumber: ' + number + '\nTime: ' + time;
+            
+            var textarea = document.createElement('textarea');
+            textarea.value = textToCopy;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('Details copied to clipboard!');
+        }
+    </script>
+</body>
+</html>
